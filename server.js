@@ -26,10 +26,10 @@ db.mongoose
 
 app.use(logger("dev"));
 
-require("./routes/student.routes")(app);
+require("./routes/movie.routes")(app);
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to glsi students application." });
+  res.json({ message: "Welcome on the platform of movies." });
 });
 
 app.listen(PORT, () => {
