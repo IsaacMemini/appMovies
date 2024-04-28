@@ -29,7 +29,7 @@ exports.create = (req, res) => {
     });
 };
 
-// Find a movie Student with an id
+// Find a movie  with an id
 exports.findOne = (req, res) => {
   const id = req.params.id;
   Movie.findById(id)
