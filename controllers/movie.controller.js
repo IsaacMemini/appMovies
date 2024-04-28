@@ -65,6 +65,10 @@ exports.findAll = (req, res) => {
 
 //update a movie with the specified id in the request
 exports.update = (req, res) => {
+  if (!req.body.title || !req.body.synopsis || !req.body.released) {
+    res.status(400).send({ message: "Content can not be empty!" });
+    return;
+  }
   const { id } = req.params;
   const { title, released, synopsis } = req.body;
 
